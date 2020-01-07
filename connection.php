@@ -19,7 +19,7 @@ Class DBConnection{
 
     //function open getPDOConnection();
     private function getPDOConnection(){
-        if($this->dbc != null){
+        if($this->dbc == null){
             try{
                 $dsn = "".$this->_config['driver'].
                     ":host=".$this->_config['hostname'].
