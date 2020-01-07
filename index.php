@@ -9,7 +9,7 @@ try{
     $sql = $database->dbc->prepare("select*from member");
     $sql->execute();
     foreach($sql as $row){
-        echo "-".$row['mem_name']."<br/>";
+        echo "-".$row['mem_code']." ".$row['mem_name']."<br/>";
     }
 }
 catch(PDOException $e){
